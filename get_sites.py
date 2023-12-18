@@ -13,7 +13,7 @@ def process_file(input_file, output_file):
             
             # Check if the chromosome is already in the dictionary
             if chromosome not in [i["chromosome"] for i in data] and (chromosome != "phiX" and chromosome != "HIVmini"):
-                  # Check if the position is unique or differs by +/- 1 or 2
+                  # Check if the position is unique or differs by +/- 1 or 2 or 3
                   if all(abs(pos - position) > 3 for pos in [i["position"] for i in data]):
                            data.append({"chromosome": chromosome, "position": int(position)})
                            outfile.write(f"{chromosome} {position} {sequence}\n")

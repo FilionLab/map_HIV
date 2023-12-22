@@ -28,3 +28,10 @@ data.txt: positive.txt negative_complement.txt
 
 sites.txt: data.txt 
 	python get_sites.py data.txt $@
+
+chromosome_length.txt: mapped.sam
+        grep '^@SQ' $^ | awk -F' |:' '{gsub("SN:", "", $2); gsub("LN:", "", $3); print $2, $3}'  > chromosome_lengths.txt
+
+insertions.png: sites.txt chromosome_length.txt
+        python plot_insertions.py $^
+

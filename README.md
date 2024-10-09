@@ -1,13 +1,17 @@
 # map_HIV
 
 Overview
+
 This project focuses on mapping HIV integration sites within the human genome using BWA. It identifies insertion sites, refines them based on specific criteria, and plots them relative to chromosome lengths. This analysis helps in understanding the distribution and potential impacts of viral integration across the genome.
 
-Objectives:
+Objectives
+
 Map HIV sequences to the human genome using BWA.
 Output insertion sites and filter for high-quality mappings.
 Visualize the distribution of insertion sites relative to chromosome lengths, with a focus on chromosomes 17 and 19.
+
 Prerequisites
+
 To get started, ensure you have the following:
 
 A working installation of BWA (Burrows-Wheeler Aligner).
